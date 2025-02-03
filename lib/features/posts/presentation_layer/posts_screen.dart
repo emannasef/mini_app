@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:it_roots_task/features/posts/presentation_layer/cubit/posts_cubit.dart';
@@ -36,7 +37,7 @@ class _PostsScreenState extends State<PostsScreen> {
             case PostLoadingState():
               return const Center(child: CircularProgressIndicator());
             case PostErrorState():
-              return const Center(child: Text("Error loading posts"));
+              return  Center(child: Text("postsError".tr()));
             case PostLoadedState():
               return ListView.builder(
                 itemCount: cubit.posts.length,

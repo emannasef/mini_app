@@ -17,7 +17,7 @@ class SettingsScreen extends StatelessWidget {
         return Scaffold(
           appBar: AppBar(
             title: Text(
-              "settings".tr(), // Ensure "settings" is the correct key
+              "settings".tr(),
               style: AppStyles.mediumTitleStyle,
             ),
           ),

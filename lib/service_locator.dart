@@ -3,7 +3,7 @@ import 'package:it_roots_task/core/network/api_utlis.dart';
 import 'package:it_roots_task/core/network/network_client.dart';
 import 'package:it_roots_task/features/posts/data_layer/data_source/posts_local_source.dart';
 import 'package:it_roots_task/features/posts/data_layer/data_source/posts_remote_source.dart';
-import 'package:it_roots_task/features/posts/domain_layer/posts_module_repo.dart';
+import 'package:it_roots_task/features/posts/domain_layer/posts_repository_impl.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 final GetIt locator = GetIt.I;

@@ -7,7 +7,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:it_roots_task/it_roots_app.dart';
 import 'package:it_roots_task/service_locator.dart';
 import 'package:it_roots_task/features/posts/data_layer/model/posts_model.dart';
-import 'package:it_roots_task/features/posts/domain_layer/posts_module_repo.dart';
+import 'package:it_roots_task/features/posts/domain_layer/posts_repository_impl.dart';
 import 'package:it_roots_task/utils/app_colors.dart';
 
 part 'posts_state.dart';

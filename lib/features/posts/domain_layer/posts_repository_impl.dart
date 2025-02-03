@@ -20,7 +20,6 @@ class PostRepositoryImpl implements PostRepository {
   Future<List<PostModel>> getRemotePosts() async {
     try {
       final remotePosts = await postRemoteDataSource.getAllPosts();
-
       await postLocalDataSource.cachePosts(remotePosts);
       return remotePosts;
     } catch (error) {

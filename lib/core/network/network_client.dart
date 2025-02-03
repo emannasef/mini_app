@@ -42,7 +42,6 @@ class NetworkClient implements INetworkClient {
 
     try {
       final response = await dio.get("${ApiConstants.baseUrl}$endPoint");
-      print("ressssssss ${response}");
       return Right(response);
     } on DioException catch (e) {
       return Left(await getDioError(e: e));

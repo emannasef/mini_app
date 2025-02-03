@@ -4,7 +4,6 @@ import 'package:it_roots_task/features/map/map_screen.dart';
 import 'package:it_roots_task/features/posts/presentation_layer/posts_screen.dart';
 import 'package:it_roots_task/features/static_data/static_data_screen.dart';
 
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:it_roots_task/features/map/cubit/map_cubit.dart';
 
 class MainNavBar extends StatefulWidget {
@@ -33,9 +32,9 @@ class _MainNavBarState extends State<MainNavBar> {
             _currentIndex = index;
           });
 
-          // Call onInitMap() when Map tab is selected
           if (index == 1) {
-            BlocProvider.of<MapCubit>(context).onInitMap();
+            final cubit = MapCubit.get(context);
+            cubit.onInitMap();
           }
         },
         items: [
@@ -47,7 +46,7 @@ class _MainNavBarState extends State<MainNavBar> {
             icon: const Icon(Icons.map),
             label: 'map'.tr(),
           ),
-           BottomNavigationBarItem(
+          BottomNavigationBarItem(
             icon: const Icon(Icons.list),
             label: 'posts'.tr(),
           ),
@@ -56,4 +55,3 @@ class _MainNavBarState extends State<MainNavBar> {
     );
   }
 }
-

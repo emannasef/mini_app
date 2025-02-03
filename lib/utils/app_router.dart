@@ -8,7 +8,6 @@ import 'package:it_roots_task/features/map/cubit/map_cubit.dart';
 import 'package:it_roots_task/features/posts/presentation_layer/cubit/posts_cubit.dart';
 import 'package:it_roots_task/features/splash/cubit/splash_cubit.dart';
 import 'package:it_roots_task/features/splash/splash_screen.dart';
-import 'package:it_roots_task/it_roots_app.dart';
 import 'package:it_roots_task/features/settings/settings_screen.dart';
 import 'package:it_roots_task/utils/app_routes.dart';
 
@@ -48,7 +47,6 @@ abstract class AppRouter {
             providers: [
               BlocProvider(create: (context) => MapCubit()),
               BlocProvider(create: (context) => PostsCubit()),
-            //  BlocProvider(create: (context) => SettingsCubit()),
             ],
             child: const MainNavBar(),
           ),
